@@ -1,4 +1,114 @@
+:root {
+    --palette-primary: #293594;
+    --palette-primary--rgb: 41, 53, 148;
+    --palette-secondary: #90bc29;
+    --palette-secondary--rgb: 144, 188, 41;
+    --palette-text: #f2f2f2;
+    --palette-text--rgb: 242, 242, 242;
+    --palette-text-invert: #0d0d0d;
+    --palette-text-invert--rgb: 13, 13, 13;
+    --padding-header_element: 10px;
+    --border_radius-header_element: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+/* ---------------------header------------------------ */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: var(--palette-primary);
+    color: var(--palette-text);
+    padding: var(--padding-header_element);
+}
+
+.header img {
+    margin-right: 10px;
+    fill: var(--palette-text);
+    width: 2em;
+}
+
+.header_right {
+    display: flex;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: 1%;
+}
+
+.header_element {
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-header_element);
+    border-radius: 20px;
+}
+
+.header_element svg {
+    width: 1em;
+    fill: var(--palette-text);
+}
+
+.header_element span {
+    display: flex;
+    align-items: end;
+    font-size: 0.7em;
+    margin-left: 5px;
+    color: var(--palette-text);
+}
+
+.header_element:hover {
+    background-color: var(--palette-text);
+    cursor: pointer;
+}
+
+.header_element:hover svg {
+    fill: var(--palette-text-invert);
+}
+
+.header_element:hover span {
+    color: var(--palette-text-invert);
+}
+
+/* ---------------------subheader------------------------ */
+.subheader {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: var(--padding-header_element);
+    justify-content: center;
+    font-size: 1.2rem;
+
+}
+
+.subheader_element {
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-header_element);
+    align-items: center;
+    margin: auto;
+    border-radius: var(--border_radius-header_element);
+}
+
+.subheader_element span {
+    color: var(--palette-text-invert);
+}
+
+.subheader_element svg {
+    fill: var(--palette-text-invert);
+}
+
+.subheader_element:hover {
+    background-color: var(--palette-text-invert);
+}
+
+.subheader_element:hover span {
+    color: var(--palette-text);
+}
+
+.subheader_element:hover svg {
+    fill: var(--palette-text);
 }

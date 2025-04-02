@@ -1,14 +1,3 @@
-:root {
-    --palette-primary: #293594;
-    --palette-primary--rgb: 41, 53, 148;
-    --palette-secondary: #90bc29;
-    --palette-secondary--rgb: 144, 188, 41;
-    --palette-text: #f2f2f2;
-    --palette-text--rgb: 242, 242, 242;
-    --palette-text-invert: #0d0d0d;
-    --palette-text-invert--rgb: 13, 13, 13;
-}
-
 body {
     background-image: linear-gradient(rgba(52, 67, 188, 0.5), rgba(52, 67, 188, 0.5)),
         url('../img/login_background.jpg');
