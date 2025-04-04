@@ -7,7 +7,6 @@
     --palette-text--rgb: 242, 242, 242;
     --palette-text-invert: #0d0d0d;
     --palette-text-invert--rgb: 13, 13, 13;
-    --border_radius-header_element: 20px;
 }
 
 * {
@@ -44,7 +43,6 @@
 .header_element {
     display: flex;
     flex-direction: row;
-    padding: var(--padding-header_element);
     border-radius: 20px;
     padding: 10px;
     margin-left: 1vw;
@@ -80,18 +78,24 @@
     display: flex;
     flex-direction: row;
     background-color: rgba(0, 0, 0, 0.05);
-    padding: var(--padding-header_element);
+    padding: 5px;
     justify-content: center;
     font-size: 1.2em;
+}
+
+.subheader_elements {
+    display: flex;
+    flex-direction: row;
 }
 
 .subheader_element {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 10px;
-    border-radius: var(--border_radius-header_element);
+    border-radius: 20px;
 }
 
 .subheader_element span {
