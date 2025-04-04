@@ -25,7 +25,28 @@
 }
 
 .reports_account_info_element_title svg {
-    width: 1.2em;
+    width: 1em;
     fill: var(--palette-text-invert);
     margin-right: 5px;
+}
+
+/* CSS Mobile */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+{
+    .reports_account_info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+    }
+
+    .reports_account_info_element {
+        margin-bottom: 5px;
+    }
+
+    .reports_account_info_element_title {
+        margin-bottom: 2%;
+        font-size: 1em;
+    }
 }
