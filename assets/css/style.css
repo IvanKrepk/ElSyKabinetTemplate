@@ -131,4 +131,8 @@ and (max-device-width : 568px)
     .subheader {
         font-size: 1em;
     }
+
+    .subheader_element {
+        margin: 0 auto;
+    }
 }

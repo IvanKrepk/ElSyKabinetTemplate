@@ -1,25 +1,41 @@
-.reports_account_info {
+.reports_content {
+    display: block;
+    margin: 0 auto;
+}
+
+.reports_grid_row {
     display: flex;
-    flex-direction: row;
-    margin: 10px 0 10px 0;
-    justify-content: center;
+    margin-top: 20px;
+}
+
+.reports_grid_element {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1em;
+    width: 25%;
+}
+
+.reports_grid_element:first-child {
+    margin-left:  0;
+}
+
+.reports_grid_element:last-child {
+    margin-right:  0;
 }
 
 .reports_account_info_element {
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgray;
-    border-radius: 5px;
     padding: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .reports_account_info_element_title {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 10%;
 }
@@ -28,6 +44,126 @@
     width: 1em;
     fill: var(--palette-text-invert);
     margin-right: 5px;
+}
+
+.reports_filter_element {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 25%;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reports_filter_element .reports_calendar_icon {
+    display: block;
+    float: left;
+    height: 100%;
+}
+
+.reports_filter_element label {
+    display: block;
+    float: left;
+    padding: 5px;
+}
+
+.reports_filter_element #idDatePeriodRefresh {
+    display: block;
+    margin-left: auto;
+    background-color: lightgray;
+    height: 100%;
+}
+
+.reports_filter_element #idDatePeriodRefresh:hover {
+    background-color: darkgrey;
+}
+.reports_filter_element #idDatePeriodRefresh:active {
+    background-color: gray;
+}
+
+.reports_spoiler {
+    margin-top: 15px;
+}
+
+.reports_spoiler_cbx {
+    position: absolute;
+    z-index: -1;
+    opacity: 0; 
+}
+
+.reports_spoiler_cbx+label {
+    display: block;
+    padding: 5px;
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    border: 1px solid transparent;
+    user-select: none;
+    cursor: pointer;
+}
+
+.reports_spoiler_cbx+label:hover {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.reports_spoiler_cbx:checked+label {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+:not(.reports_spoiler_cbx:checked)+label+.reports_spoiler_content {
+    display: none;
+    padding: 5px;
+}
+
+.reports_spoiler_row {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+.reports_spoiler_row:hover {
+    background-color: var(--palette-secondary);
+}
+
+.reports_spoiler_element_name {
+    font-weight: bold;
+    width: 100%;
+}
+
+.reports_spoiler_element_actions {
+    display: flex;
+}
+
+.reports_spoiler_element_action {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.reports_spoiler_element_action_view {
+    margin-right: 10px;
+    background-color: var(--palette-primary);
+    color: var(--palette-text);
+}
+
+.reports_spoiler_element_actions select {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    border: none;
+    background-color: lightgrey;
+}
+
+.reports_spoiler_element_actions select:focus {
+    outline: none;
 }
 
 /* CSS Mobile */
@@ -41,8 +177,13 @@ and (max-device-width : 568px)
         margin-top: 5px;
     }
 
+    .reports_account_info, .reports_filter {
+        width: 100%;
+    }
+
     .reports_account_info_element {
         margin-bottom: 5px;
+        width: auto;
     }
 
     .reports_account_info_element_title {
