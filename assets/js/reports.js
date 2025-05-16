@@ -1,5 +1,9 @@
 'use strict';
 
+document.addEventListener('DOMContentLoaded', () => {
+
+//#region DateRangePicker
+
 $('#idDatePeriodReports').daterangepicker({
     startDate: moment().subtract(20, 'days'),
     endDate: moment(),
@@ -54,4 +58,8 @@ let buttonDateRangeRefresh = document.querySelector("#idDatePeriodRefresh");
 buttonDateRangeRefresh.addEventListener('click', function() {
     labelDateRange.textContent = "Введите период";
     labelDateRange.style.color = "gray";
+});
+
+//#endregion 
+
 });

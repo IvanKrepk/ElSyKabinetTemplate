@@ -3,8 +3,12 @@
     --palette-primary--rgb: 41, 53, 148;
     --palette-secondary: #90bc29;
     --palette-secondary--rgb: 144, 188, 41;
+    --palette-header: #0000000d;
     --palette-text: #f2f2f2;
     --palette-text--rgb: 242, 242, 242;
+    --palette-border: lightgray;
+    --palette-border-focused: #8db6c4;
+    --palette-border-focused--rgb: 141, 182, 196;
     --palette-text-invert: #0d0d0d;
     --palette-text-invert--rgb: 13, 13, 13;
 }
@@ -14,7 +18,8 @@
     padding: 0;
 }
 
-/* ---------------------header------------------------ */
+/*#region Header*/
+
 .header {
     display: flex;
     flex-direction: row;
@@ -73,11 +78,14 @@
     color: var(--palette-text-invert);
 }
 
-/* ---------------------subheader------------------------ */
+/*#endregion*/
+
+/*#region Subheader*/
+
 .subheader {
     display: flex;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--palette-header);
     padding: 5px;
     justify-content: center;
     font-size: 1.2em;
@@ -118,7 +126,96 @@
     fill: var(--palette-text);
 }
 
-/* CSS Mobile */
+/*#endregion*/
+
+/*#region My Dropdown */
+
+.elsy-dropdown {
+    /*Inputs*/
+    --font-size: 1rem;                                          /* размер шрифта */
+    --arrow-size: 0.5rem;                                       /* размер стрелки */
+    --background-selector: var(--palette-dropdown-title);       /* цвет титульной кнопки */
+    --border-radius: 5px;                                       /* округление углов элементов */
+    --color-border: var(--palette-border);                      /* цвет рамки */
+    --color-border-focused: var(--palette-border-focused);      /* цвет рамки в фокусе*/
+    --color-hovered: var(--palette-text);                       /* цвет текста выделенных элементов */
+    --background-hovered: var(--palette-primary);               /* цвет фона выделенных элементов */
+    --background-scrollbar-track: #f1f1f1;                    /* фон скроллбара */
+    --background-scrollbar-thumb: #ccc;                       /* цвет ползунка скроллбара */
+
+    display: inline-block;
+    position: relative;
+    font-size: var(--font-size);
+    width: 300px;
+    --font: font;
+    --width: width;
+}
+
+.elsy-dropdown button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--palette-border);
+    border-radius: var(--border-radius);
+    background-color: var(--background-selector);
+    font: var(--font);
+    cursor: pointer;
+    user-select: none;
+}
+
+.elsy-dropdown .dropdown-arrow {
+    margin-left: 10px;
+    border-right: var(--arrow-size) solid transparent;
+    border-left: var(--arrow-size) solid transparent;
+    border-bottom: none;
+    border-top: var(--arrow-size) solid black;
+}
+
+.elsy-dropdown ul {
+    position: absolute;
+    width: calc((100%) - 2px);
+    padding: 0;
+    border: 1px solid var(--palette-border);
+    border-radius: var(--border-radius);
+    list-style: none;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.elsy-dropdown ul::-webkit-scrollbar {
+    width: 10px;
+}
+
+.elsy-dropdown ul::-webkit-scrollbar-track {
+    background: var(--background-scrollbar-track);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.elsy-dropdown ul::-webkit-scrollbar-thumb {
+    background: var(--background-scrollbar-thumb);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.elsy-dropdown ul li {
+    padding: 5px;
+}
+
+.elsy-dropdown ul li:hover {
+    background-color: var(--background-hovered);
+    color: var(--color-hovered);
+}
+
+.dropdown-hidden {
+    display: none;
+}
+
+/*#endregion*/
+
+/*#region CSSMobile*/
 
 @media only screen
 and (min-device-width : 320px)
@@ -136,3 +233,5 @@ and (max-device-width : 568px)
         margin: 0 auto;
     }
 }
+
+/*#endregion*/

@@ -114,33 +114,53 @@
                 <option value="2">АИ-92 (2)</option>
             </select>
 
-            <select class="reports_grid_element reports_filter_element" name="Account" size="1">
+            <div class="elsy-dropdown">
+                <button id="id-dropdown-button">
+                    <span class="dropdown-current">Выберите...</span>
+                    <div class="dropdown-arrow"></div>
+                </button>
+                <ul class="dropdown-list dropdown-hidden">
+                    <li>Первый</li>
+                    <li>Второй</li>
+                    <li>Третий</li>
+                    <li>Четвертый</li>
+                    <li>Пятый</li>
+                    <li>Шестой</li>
+                    <li>Седьмой</li>
+                    <li>Восьмой</li>
+                    <li>Девятый</li>
+                </ul>
+            </div>
+            <!-- <select class="reports_grid_element reports_filter_element" name="Account" size="1">
                 <option value="-1" selected>Все счета</option>
                 <option value="1">230 (230)</option>
                 <option value="2">840 (840)</option>
-            </select>
+            </select> -->
         </div>
-        <div class="reports_spoiler">
-            <input type="checkbox" class="reports_spoiler_cbx" id="cbxSpoiler"/>
-            <label for="cbxSpoiler">Безналичные отчеты</label>
-            <div class="reports_spoiler_content">
-                <div class="reports_spoiler_row">
-                    <div class="reports_spoiler_element_name">Список отчётов</div>
-                    <div class="reports_spoiler_element_actions">
-                        <div class="reports_spoiler_element_action reports_spoiler_element_action_view">Посмотреть</div>
-                        <select class="reports_spoiler_element_action">
-                            <option value="-1" selected>Скачать</option>
-                            <option value="1">PDF</option>
-                            <option value="2">XLS</option>
-                        </select>
+        <div class="report_spoilers">
+            <div class="reports_spoiler">
+                <input type="checkbox" class="reports_spoiler_cbx" id="cbxSpoiler"/>
+                <label for="cbxSpoiler">Безналичные отчеты</label>
+                <div class="reports_spoiler_content">
+                    <div class="reports_spoiler_row">
+                        <div class="reports_spoiler_element_name">Список отчётов</div>
+                        <div class="reports_spoiler_element_actions">
+                            <div class="reports_spoiler_element_action reports_spoiler_element_action_view">Посмотреть</div>
+                            <select class="reports_spoiler_element_action">
+                                <option value="-1" selected>Скачать</option>
+                                <option value="1">PDF</option>
+                                <option value="2">XLS</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-            </div>    
+                </div>    
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/moment.min.js"></script>
     <script type="text/javascript" src="assets/js/daterangepicker.js"></script>
     <script type="text/javascript" src="assets/js/reports.js"></script>
+    <script type="text/javascript" src="assets/js/dropdown.js"></script>
 </body>
 </html>
