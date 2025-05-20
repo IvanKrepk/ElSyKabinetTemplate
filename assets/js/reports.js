@@ -40,24 +40,19 @@ $('#idDatePeriodReports').daterangepicker({
     ]
 }});
 
-let labelDateRange = document.querySelector("#idDatePeriodReports");
-labelDateRange.style.color = "gray";
+let labelDateRange = document.querySelector("#idDateRangeTitle");
 
 let dateRangePicker = $("#idDatePeriodReports").data('daterangepicker');
-dateRangePicker.callback = function() {
-    let lblReportsDatePeriod = document.querySelector("#idDatePeriodReports");
-    
+dateRangePicker.callback = function() { 
     let startDate = $("#idDatePeriodReports").data('daterangepicker').startDate.format("YYYY/MM/DD");
     let endDate = $("#idDatePeriodReports").data('daterangepicker').endDate.format("YYYY/MM/DD");
 
-    lblReportsDatePeriod.textContent = startDate + " - " + endDate;
-    labelDateRange.style.color = "black";
+   labelDateRange.textContent = startDate + " - " + endDate;
 }
 
-let buttonDateRangeRefresh = document.querySelector("#idDatePeriodRefresh");
+let buttonDateRangeRefresh = document.querySelector(".daterangepicker_element_refresh");
 buttonDateRangeRefresh.addEventListener('click', function() {
     labelDateRange.textContent = "Введите период";
-    labelDateRange.style.color = "gray";
 });
 
 //#endregion 

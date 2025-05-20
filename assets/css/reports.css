@@ -10,9 +10,10 @@
     margin-top: 20px;
 }
 
+
+/*#region reports_grid_element*/
+
 .reports_grid_element {
-    border: 1px solid var(--palette-border);
-    border-radius: 5px;
     margin-left: 10px;
     margin-right: 10px;
     font-size: 1em;
@@ -27,6 +28,11 @@
     margin-right:  0;
 }
 
+/*#endregion*/
+
+
+/*#region reports_account_info_element*/
+ 
 .reports_account_info_element {
     display: flex;
     flex-direction: column;
@@ -48,46 +54,14 @@
     margin-right: 5px;
 }
 
-.reports_filter_element {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid var(--palette-border);
-    border-radius: 5px;
-    width: 25%;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.reports_filter_element .reports_calendar_icon {
-    display: block;
-    float: left;
-    height: 100%;
-}
-
-.reports_filter_element label {
-    display: block;
-    float: left;
-    padding: 5px;
-}
-
-.reports_filter_element #idDatePeriodRefresh {
-    display: block;
-    margin-left: auto;
-    background-color: lightgray;
-    height: 100%;
-}
-
-.reports_filter_element #idDatePeriodRefresh:hover {
-    background-color: darkgrey;
-}
-.reports_filter_element #idDatePeriodRefresh:active {
-    background-color: gray;
-}
+/*#endregion*/
 
 .report_spoilers {
     margin-top: 30px;
 }
+
+
+/*#region reports_spoiler_cbx*/
 
 .reports_spoiler_cbx {
     position: absolute;
@@ -110,7 +84,7 @@
     cursor: pointer;
 }
 
-:not(.reports_spoiler_cbx):checked+label {
+:not(.reports_spoiler_cbx:checked)+label {
     background-color: var(--palette-header);
 }
 
@@ -118,6 +92,11 @@
     display: none;
     padding: 5px;
 }
+
+/*#endregion*/
+
+
+/*#region reports_spoiler_row*/
 
 .reports_spoiler_row {
     display: flex;
@@ -130,6 +109,8 @@
 .reports_spoiler_row:hover {
     background-color: var(--palette-secondary);
 }
+
+/*#endregion*/
 
 .reports_spoiler_element_name {
     font-weight: bold;

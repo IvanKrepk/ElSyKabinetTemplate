@@ -88,54 +88,66 @@
                 </div>
         </div>  
         <div class="reports_grid_row">
-            <div class="reports_grid_element reports_filter_element">
-                <div class="reports_calendar_icon">
+            <div class="reports_grid_element nowrap">
+                <div class="daterangepicker_element">
+                    <div class="daterangepicker_field" id="idDatePeriodReports">
+                        <svg class="daterangepicker_element_icon" viewBox="-200 -200 1500 1500" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M128 384v512h768V192H768v32a32 32 0 1 1-64 0v-32H320v32a32 32 0 0 1-64 0v-32H128v128h768v64H128zm192-256h384V96a32 32 0 1 1 64 0v32h160a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h160V96a32 32 0 0 1 64 0v32zm-32 384h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm192-192h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm192-192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64z"></path>
+                        </svg>
+                        <span id="idDateRangeTitle">Введите период</span>
+                    </div>
+                    <div class="daterangepicker_element_refresh">
+                        <svg class="daterangepicker_element_icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M784.512 230.272v-50.56a32 32 0 1 1 64 0v149.056a32 32 0 0 1-32 32H667.52a32 32 0 1 1 0-64h92.992A320 320 0 1 0 524.8 833.152a320 320 0 0 0 320-320h64a384 384 0 0 1-384 384 384 384 0 0 1-384-384 384 384 0 0 1 643.712-282.88z"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- <div class="reports_calendar_icon">
                     <svg height="100%" viewBox="-200 -200 1500 1500" xmlns="http://www.w3.org/2000/svg">
                         <path d="M128 384v512h768V192H768v32a32 32 0 1 1-64 0v-32H320v32a32 32 0 0 1-64 0v-32H128v128h768v64H128zm192-256h384V96a32 32 0 1 1 64 0v32h160a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h160V96a32 32 0 0 1 64 0v32zm-32 384h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm192-192h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm192-192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64z"></path>
                     </svg>
                 </div>
-                <label id="idDatePeriodReports">Введите период</label>
+                <div id="idDatePeriodReports">Введите период</div>
                 <div id="idDatePeriodRefresh" title="Сбросить дату">
                     <svg height="100%" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
                         <path d="M784.512 230.272v-50.56a32 32 0 1 1 64 0v149.056a32 32 0 0 1-32 32H667.52a32 32 0 1 1 0-64h92.992A320 320 0 1 0 524.8 833.152a320 320 0 0 0 320-320h64a384 384 0 0 1-384 384 384 384 0 0 1-384-384 384 384 0 0 1 643.712-282.88z"></path>
                     </svg>
-                </div>
+                </div> -->
             </div>
 
-            <select class="reports_grid_element reports_filter_element" name="AFS" size="1">
-                <option value="-1" selected>Все АЗС</option>
-                <option value="1">АЗС №1 (1)</option>
-                <option value="2">АЗС №2 (2)</option>
-            </select>
-
-            <select class="reports_grid_element reports_filter_element" name="Product" size="1">
-                <option value="-1" selected>Все нефтепродукты</option>
-                <option value="1">АИ-80 (1)</option>
-                <option value="2">АИ-92 (2)</option>
-            </select>
-
-            <div class="elsy-dropdown">
+            <div class="elsy-dropdown reports_grid_element nowrap" name="AFS">
                 <button id="id-dropdown-button">
-                    <span class="dropdown-current">Выберите...</span>
+                    <span class="dropdown-current">Все АЗС</span>
                     <div class="dropdown-arrow"></div>
                 </button>
                 <ul class="dropdown-list dropdown-hidden">
-                    <li>Первый</li>
-                    <li>Второй</li>
-                    <li>Третий</li>
-                    <li>Четвертый</li>
-                    <li>Пятый</li>
-                    <li>Шестой</li>
-                    <li>Седьмой</li>
-                    <li>Восьмой</li>
-                    <li>Девятый</li>
+                    <li>АЗС №1 (1)</li>
+                    <li>АЗС №2 (2)</li>
                 </ul>
             </div>
-            <!-- <select class="reports_grid_element reports_filter_element" name="Account" size="1">
-                <option value="-1" selected>Все счета</option>
-                <option value="1">230 (230)</option>
-                <option value="2">840 (840)</option>
-            </select> -->
+
+            <div class="elsy-dropdown reports_grid_element nowrap" name="Product">
+                <button id="id-dropdown-button">
+                    <span class="dropdown-current">Все нефтепродукты</span>
+                    <div class="dropdown-arrow"></div>
+                </button>
+                <ul class="dropdown-list dropdown-hidden">
+                    <li>АИ-80 (1)</li>
+                    <li>АИ-92 (2)</li>
+                </ul>
+            </div>
+
+            <div class="elsy-dropdown reports_grid_element nowrap" name="Account">
+                <button id="id-dropdown-button">
+                    <span class="dropdown-current">Все счета</span>
+                    <div class="dropdown-arrow"></div>
+                </button>
+                <ul class="dropdown-list dropdown-hidden">
+                    <li>230 (230)</li>
+                    <li>840 (840)</li>
+                </ul>
+            </div>
         </div>
         <div class="report_spoilers">
             <div class="reports_spoiler">

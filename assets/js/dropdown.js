@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let elsyDropdowns = document.querySelectorAll(".elsy-dropdown");
+let elsyDropdowns = document.querySelectorAll(".elsy-dropdown");
     elsyDropdowns.forEach(elsyDropDown => {
         let isFocused = false;
         let elsyDropDownSelected = elsyDropDown.querySelector(".dropdown-current");
@@ -32,13 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleArrow();
 
             if (elsyDropDownList.classList.contains("dropdown-hidden")) {
-                elsyDropDownButton.style.borderBottom = "1px solid var(--color-border)";
-                elsyDropDownList.style.borderTop = "1px solid var(--color-border)";
+                elsyDropDownButton.style.borderBottomWidth = "1px";
+                elsyDropDownList.style.borderTopWidth = "1px";
                 elsyDropDownButton.style.borderBottomLeftRadius = "var(--border-radius)";
                 elsyDropDownButton.style.borderBottomRightRadius = "var(--border-radius)";
             } else {
-                elsyDropDownButton.style.borderBottom = "none";    
-                elsyDropDownList.style.borderTop = "none";  
+                elsyDropDownButton.style.borderBottomWidth = "0px";    
+                elsyDropDownList.style.borderTopWidth = "0px";  
                 elsyDropDownButton.style.borderBottomLeftRadius = "0px";
                 elsyDropDownButton.style.borderBottomRightRadius = "0px";  
             }
@@ -69,4 +68,3 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         });
     });
-});

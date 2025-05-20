@@ -11,11 +11,17 @@
     --palette-border-focused--rgb: 141, 182, 196;
     --palette-text-invert: #0d0d0d;
     --palette-text-invert--rgb: 13, 13, 13;
+    --palette-hover: rgba(0, 0, 0, 0.2);
+    --palette-active: rgba(0, 0, 0, 0.3);
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 /*#region Header*/
@@ -128,13 +134,14 @@
 
 /*#endregion*/
 
-/*#region My Dropdown */
+/*#region ElSyDropdown */
 
 .elsy-dropdown {
     /*Inputs*/
-    --font-size: 1rem;                                          /* размер шрифта */
+    --font-size: 1rem;                                          /*размер шрифта */
     --arrow-size: 0.5rem;                                       /* размер стрелки */
-    --background-selector: var(--palette-dropdown-title);       /* цвет титульной кнопки */
+    --background-selector: var(--palette-header);               /* цвет титульной кнопки */
+    --background-list-items: #ffffff                    ;     /* цвет титульной кнопки */
     --border-radius: 5px;                                       /* округление углов элементов */
     --color-border: var(--palette-border);                      /* цвет рамки */
     --color-border-focused: var(--palette-border-focused);      /* цвет рамки в фокусе*/
@@ -146,7 +153,6 @@
     display: inline-block;
     position: relative;
     font-size: var(--font-size);
-    width: 300px;
     --font: font;
     --width: width;
 }
@@ -175,6 +181,7 @@
 
 .elsy-dropdown ul {
     position: absolute;
+    background-color: var(--background-list-items);
     width: calc((100%) - 2px);
     padding: 0;
     border: 1px solid var(--palette-border);
@@ -211,6 +218,45 @@
 
 .dropdown-hidden {
     display: none;
+}
+
+/*#endregion*/
+
+/*#region DatePicker*/
+
+.daterangepicker_element {
+    display: flex;
+    align-items: center;
+    background-color: var(--palette-header);
+    border: 1px solid var(--palette-border);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.daterangepicker_element .daterangepicker_field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+}
+
+.daterangepicker_element .daterangepicker_element_icon {
+    width: 1.7em;
+    margin: 0 5px;
+}
+
+.daterangepicker_element .daterangepicker_element_refresh {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.daterangepicker_element .daterangepicker_element_refresh:hover {
+    background-color: var(--palette-hover);
+}
+
+.daterangepicker_element .daterangepicker_element_refresh:active {
+    background-color: var(--palette-active);
 }
 
 /*#endregion*/
