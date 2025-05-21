@@ -13,6 +13,7 @@
     --palette-text-invert--rgb: 13, 13, 13;
     --palette-hover: rgba(0, 0, 0, 0.2);
     --palette-active: rgba(0, 0, 0, 0.3);
+    --palette-dropdown-title: #e0e1e2;
 }
 
 * {
@@ -136,23 +137,51 @@
 
 /*#region ElSyDropdown */
 
-.elsy-dropdown {
-    /*Inputs*/
+.elsy-dropdown_params-report-action {
+/*Inputs*/
+    --justify-content: center;                           /*justify-content титульной кнопки*/
+    --padding-title: 5px 0px;                                  /*внутренние отступы для титульной кнопки*/      
+    --padding-items: 5px;                                       /*внутренние отступы для пунктов*/      
     --font-size: 1rem;                                          /*размер шрифта */
     --arrow-size: 0.5rem;                                       /* размер стрелки */
-    --background-selector: var(--palette-header);               /* цвет титульной кнопки */
+    --background-title: var(--palette-dropdown-title);          /* цвет титульной кнопки */
     --background-list-items: #ffffff                    ;     /* цвет титульной кнопки */
     --border-radius: 5px;                                       /* округление углов элементов */
     --color-border: var(--palette-border);                      /* цвет рамки */
     --color-border-focused: var(--palette-border-focused);      /* цвет рамки в фокусе*/
     --color-hovered: var(--palette-text);                       /* цвет текста выделенных элементов */
+    --color-icon-hovered: var(--palette-text);                  /* цвет заливки иконки при выделении элемента*/
     --background-hovered: var(--palette-primary);               /* цвет фона выделенных элементов */
     --background-scrollbar-track: #f1f1f1;                    /* фон скроллбара */
     --background-scrollbar-thumb: #ccc;                       /* цвет ползунка скроллбара */
+    --icon-right-margin: 5px;                                   /* margin иконки элемента */
+}
 
+.elsy-dropdown_params-default {
+/*Inputs*/
+    --justify-content: space-between;                           /*justify-content титульной кнопки*/
+    --padding-title: 5px;                                       /*внутренние отступы для титульной кнопки*/      
+    --padding-items: 5px;                                       /*внутренние отступы для пунктов*/      
+    --font-size: 1rem;                                          /*размер шрифта */
+    --arrow-size: 0.5rem;                                       /* размер стрелки */
+    --background-title: var(--palette-dropdown-title);          /* цвет титульной кнопки */
+    --background-list-items: #ffffff;                         /* цвет титульной кнопки */
+    --border-radius: 5px;                                       /* округление углов элементов */
+    --color-border: var(--palette-border);                      /* цвет рамки */
+    --color-border-focused: var(--palette-border-focused);      /* цвет рамки в фокусе*/
+    --color-hovered: var(--palette-text);                       /* цвет текста выделенных элементов */
+    --color-icon-hovered: var(--palette-text);                  /* цвет заливки иконки при выделении элемента*/ 
+    --background-hovered: var(--palette-primary);               /* цвет фона выделенных элементов */
+    --background-scrollbar-track: #f1f1f1;                    /* фон скроллбара */
+    --background-scrollbar-thumb: #ccc;                       /* цвет ползунка скроллбара */
+    --icon-right-margin: 5px;                                   /* margin иконки элемента */
+}
+
+.elsy-dropdown {
     display: inline-block;
     position: relative;
     font-size: var(--font-size);
+    min-width: 150px;
     --font: font;
     --width: width;
 }
@@ -160,12 +189,12 @@
 .elsy-dropdown button {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: var(--justify-content);
     width: 100%;
-    padding: 5px;
+    padding: var(--padding-title);
     border: 1px solid var(--palette-border);
     border-radius: var(--border-radius);
-    background-color: var(--background-selector);
+    background-color: var(--background-title);
     font: var(--font);
     cursor: pointer;
     user-select: none;
@@ -208,12 +237,22 @@
 }
 
 .elsy-dropdown ul li {
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    padding: var(--padding-items);
 }
 
 .elsy-dropdown ul li:hover {
     background-color: var(--background-hovered);
     color: var(--color-hovered);
+}
+
+.elsy-dropdown ul li svg {
+    margin-right: var(--icon-right-margin);
+}
+
+.elsy-dropdown ul li:hover svg {
+    fill: var(--color-icon-hovered);
 }
 
 .dropdown-hidden {
@@ -227,7 +266,7 @@
 .daterangepicker_element {
     display: flex;
     align-items: center;
-    background-color: var(--palette-header);
+    background-color: var(--palette-dropdown-title);
     border: 1px solid var(--palette-border);
     border-radius: 5px;
     cursor: pointer;

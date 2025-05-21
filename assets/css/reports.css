@@ -18,6 +18,7 @@
     margin-right: 10px;
     font-size: 1em;
     width: 25%;
+    min-width: 150px;
 }
 
 .reports_grid_element:first-child {
@@ -36,6 +37,8 @@
 .reports_account_info_element {
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--palette-border);
+    border-radius: 5px;
     padding: 15px;
 }
 
@@ -101,6 +104,8 @@
 .reports_spoiler_row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
     padding: 5px 10px;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
@@ -114,19 +119,22 @@
 
 .reports_spoiler_element_name {
     font-weight: bold;
-    width: 100%;
+    width: 70%;
 }
 
 .reports_spoiler_element_actions {
     display: flex;
+    width: 30%;
 }
 
 .reports_spoiler_element_action {
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: 5px;
-    padding: 10px 15px;
     cursor: pointer;
+    padding: 5px 0px;
+    width: 50%;
 }
 
 .reports_spoiler_element_action_view {
@@ -144,6 +152,10 @@
 
 .reports_spoiler_element_actions select:focus {
     outline: none;
+}
+
+.reports_spoiler_element_dropdown {
+    width: 50%;
 }
 
 /* CSS Mobile */
