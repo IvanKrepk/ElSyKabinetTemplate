@@ -181,7 +181,6 @@
     display: inline-block;
     position: relative;
     font-size: var(--font-size);
-    min-width: 150px;
     --font: font;
     --width: width;
 }
