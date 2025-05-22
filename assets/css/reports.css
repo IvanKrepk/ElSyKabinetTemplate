@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 70%;
     margin: 0 auto 30px auto;
-    min-width: 800px;
+    min-width: 870px;
 }
 
 .reports_grid_row {
@@ -19,7 +19,7 @@
     margin-right: 10px;
     font-size: 1em;
     width: 25%;
-    min-width: 150px;
+    min-width: 200px;
 }
 
 .reports_grid_element:first-child {
@@ -168,26 +168,72 @@
 
 /* CSS Mobile */
 @media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
+and (max-width : 568px)
 {
-    .reports_account_info {
+    .reports_content {
+        all: initial;
         display: flex;
         flex-direction: column;
+        width: 100vw;
+    }
+
+    .reports_grid_row {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 15px 0;
+    }
+
+    .reports_grid_element {
+        all: initial;
+        margin: 5px 0;
+    }
+
+    .reports_grid_element:first-child {
+        all: initial;
+        margin-bottom: 5px;
+    }
+
+    .reports_grid_element:last-child {
+        all: initial;
         margin-top: 5px;
     }
 
-    .reports_account_info, .reports_filter {
-        width: 100%;
-    }
-
     .reports_account_info_element {
-        margin-bottom: 5px;
-        width: auto;
+        padding: 5px;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    .reports_account_info_element_title {
-        margin-bottom: 2%;
-        font-size: 1em;
+    .reports_account_info_element_title, .report_spoilers {
+        margin: 0;
+    }
+
+    .reports_spoiler_row {
+        all: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--palette-border);
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .reports_spoiler_element_name {
+        all: initial;
+    }
+
+    .reports_spoiler_element_actions {
+        all: initial;
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .reports_spoiler_element_action {
+        padding: 5px 10px;
+    }
+
+    .elsy-dropdown_params-report-action {
+        --padding-title: 5px 10px;
     }
 }
