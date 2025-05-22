@@ -21,6 +21,12 @@
     padding: 0;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nowrap {
     white-space: nowrap;
 }
@@ -95,7 +101,6 @@
     background-color: var(--palette-header);
     padding: 5px;
     justify-content: center;
-    font-size: 1.2em;
 }
 
 .subheader_elements {
@@ -111,6 +116,8 @@
     margin-right: 20px;
     padding: 10px;
     border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .subheader_element span {
@@ -219,6 +226,7 @@
     max-height: 200px;
     overflow-y: auto;
     cursor: pointer;
+    z-index: 2;
 }
 
 .elsy-dropdown ul::-webkit-scrollbar {
