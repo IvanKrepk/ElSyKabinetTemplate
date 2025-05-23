@@ -1,9 +1,9 @@
 .reports_content {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     margin: 0 auto 30px auto;
-    min-width: 870px;
+    min-width: 65em;
 }
 
 .reports_grid_row {
