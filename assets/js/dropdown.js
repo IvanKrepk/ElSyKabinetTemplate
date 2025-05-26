@@ -31,21 +31,25 @@ let elsyDropdowns = document.querySelectorAll(".elsy-dropdown");
             toggleArrow();
 
             if (elsyDropDownList.classList.contains("dropdown-hidden")) {
-                elsyDropDownButton.style.borderBottomWidth = "1px";
+                elsyDropDownButton.style.borderBottomWidth = "0px";
                 elsyDropDownList.style.borderTopWidth = "1px";
+                elsyDropDown.style.borderBottomLeftRadius = "var(--border-radius)";
+                elsyDropDown.style.borderBottomRightRadius = "var(--border-radius)";
                 elsyDropDownButton.style.borderBottomLeftRadius = "var(--border-radius)";
-                elsyDropDownButton.style.borderBottomRightRadius = "var(--border-radius)";
+                elsyDropDownButton.style.borderBottomRightRadius = "var(--border-radius)"; 
             } else {
                 elsyDropDownButton.style.borderBottomWidth = "0px";    
                 elsyDropDownList.style.borderTopWidth = "0px";  
+                elsyDropDown.style.borderBottomLeftRadius = "0px";
+                elsyDropDown.style.borderBottomRightRadius = "0px";  
                 elsyDropDownButton.style.borderBottomLeftRadius = "0px";
-                elsyDropDownButton.style.borderBottomRightRadius = "0px";  
+                elsyDropDownButton.style.borderBottomRightRadius = "0px"; 
             }
         };
 
         elsyDropDownButton.addEventListener("click", () => {
             toggleDropdown();
-            elsyDropDownButton.style.borderColor = "var(--color-border-focused)";
+            elsyDropDown.style.borderColor = "var(--color-border-focused)";
             elsyDropDownList.style.borderColor = "var(--color-border-focused)";
         });
 
@@ -54,7 +58,7 @@ let elsyDropdowns = document.querySelectorAll(".elsy-dropdown");
             setTimeout(() => { 
                 toggleDropdown(true); 
                 if (!isFocused) {
-                    elsyDropDownButton.style.borderColor = "var(--color-border)";
+                    elsyDropDown.style.borderColor = "var(--color-border)";
                     elsyDropDownList.style.borderColor = "var(--color-border)";
                 }
             }, 150);

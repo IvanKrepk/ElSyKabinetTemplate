@@ -196,6 +196,8 @@ footer {
     display: inline-block;
     position: relative;
     font-size: var(--font-size);
+    border: 1px solid var(--palette-border); 
+    border-radius: var(--border-radius);
     --font: font;
     --width: width;
 }
@@ -206,7 +208,7 @@ footer {
     justify-content: var(--justify-content);
     width: 100%;
     padding: var(--padding-title);
-    border: 1px solid var(--palette-border);
+    border: none;
     border-radius: var(--border-radius);
     background-color: var(--background-title);
     font: var(--font);
@@ -224,8 +226,9 @@ footer {
 
 .elsy-dropdown ul {
     position: absolute;
+    left: -1px;
     background-color: var(--background-list-items);
-    width: calc((100%) - 2px);
+    width: 100%;
     padding: 0;
     border: 1px solid var(--palette-border);
     border-radius: var(--border-radius);
