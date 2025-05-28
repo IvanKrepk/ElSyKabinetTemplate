@@ -5,7 +5,8 @@
     --palette-secondary--rgb: 144, 188, 41;
     --palette-header: #0000000d;
     --palette-text: #f2f2f2;
-    --palette-text--rgb: 242, 242, 242;
+    --palette-text-enable: black;
+    --palette-text-not-enable: gray;
     --palette-border: lightgray;
     --palette-border-focused: #8db6c4;
     --palette-border-focused--rgb: 141, 182, 196;
@@ -24,7 +25,16 @@
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto 30px auto;
+    min-width: 65em;
 }
 
 footer {
@@ -273,7 +283,7 @@ footer {
     fill: var(--color-icon-hovered);
 }
 
-.dropdown-hidden {
+.hidden {
     display: none;
 }
 
@@ -321,9 +331,15 @@ footer {
 /*#region CSSMobile*/
 
 @media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
+and (max-width : 568px)
 {
+    .content {
+        all: initial;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
     .header h2 {
         font-size: 1.5em;
     }

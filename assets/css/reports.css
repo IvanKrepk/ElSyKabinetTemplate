@@ -1,11 +1,3 @@
-.reports_content {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin: 0 auto 30px auto;
-    min-width: 65em;
-}
-
 .reports_grid_row {
     display: flex;
     margin-top: 20px;
@@ -167,16 +159,10 @@
 }
 
 /* CSS Mobile */
+
 @media only screen
 and (max-width : 568px)
 {
-    .reports_content {
-        all: initial;
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-    }
-
     .reports_grid_row {
         display: flex;
         flex-direction: column;

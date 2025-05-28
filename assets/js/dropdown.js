@@ -1,3 +1,5 @@
+'use strict';
+
 let elsyDropdowns = document.querySelectorAll(".elsy-dropdown");
     elsyDropdowns.forEach(elsyDropDown => {
         let isFocused = false;
@@ -11,7 +13,7 @@ let elsyDropdowns = document.querySelectorAll(".elsy-dropdown");
         elsyDropDownList.style.borderTopRightRadius = "0px";
 
         const toggleArrow = () => {
-            if (elsyDropDownList.classList.contains("dropdown-hidden")) {
+            if (elsyDropDownList.classList.contains("hidden")) {
                 elsyDropDownArrow.style.borderRight = "var(--arrow-size) solid transparent";
                 elsyDropDownArrow.style.borderLeft = "var(--arrow-size) solid transparent";
                 elsyDropDownArrow.style.borderTop = "var(--arrow-size) solid black";
@@ -25,12 +27,12 @@ let elsyDropdowns = document.querySelectorAll(".elsy-dropdown");
         };
 
         const toggleDropdown = (toHide = null) => {
-            (toHide == null) ? elsyDropDownList.classList.toggle("dropdown-hidden") : 
-                elsyDropDownList.classList.toggle("dropdown-hidden", toHide);
+            (toHide == null) ? elsyDropDownList.classList.toggle("hidden") : 
+                elsyDropDownList.classList.toggle("hidden", toHide);
 
             toggleArrow();
 
-            if (elsyDropDownList.classList.contains("dropdown-hidden")) {
+            if (elsyDropDownList.classList.contains("hidden")) {
                 elsyDropDownButton.style.borderBottomWidth = "0px";
                 elsyDropDownList.style.borderTopWidth = "1px";
                 elsyDropDown.style.borderBottomLeftRadius = "var(--border-radius)";

@@ -1,0 +1,106 @@
+/*#region accounts-list*/
+
+.accounts-list {
+    --border-radius: 5px;
+    --color-scrolbar-track: #f1f1f1;
+    --color-scrolbar-thumb: #a19e9e;
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--palette-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 5px 1px var(--palette-hover);
+    max-width: 300px; 
+    max-height: 300px; 
+}
+
+.accounts-list-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--palette-dropdown-title);
+    padding: 5px;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    font-weight: bold;
+}
+
+.accounts-list-title .accounts-number {
+    background-color: var(--color-scrolbar-thumb);
+    color: var(--palette-text);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.accounts-list-filter {
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid var(--palette-border);
+    border-radius: var(--border-radius);
+}
+
+.accounts-list-filter svg {
+    width: 1.4em;
+    margin-right: 5px;
+    fill: var(--palette-text-not-enable);
+}
+
+.accounts-list-filter input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.accounts-list-filter input[type="text"]::placeholder {
+    color: var(--colorPlaceholer, var(--palette-text-not-enable));
+}
+
+.accounts-list ul {
+    height: 100%;
+    list-style: none;
+    overflow-y: auto;
+}
+
+.accounts-list ul::-webkit-scrollbar {
+    width: 10px;       
+    height: 10px;
+}
+
+.accounts-list ul::-webkit-scrollbar-track {
+    background-color: var(--color-scrolbar-track);
+}
+
+.accounts-list ul::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrolbar-thumb);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.accounts-list ul li {
+    padding: 5px 5px;
+}
+
+.accounts-list ul li:hover {
+    background-color: var(--palette-primary);
+    color: var(--palette-text);
+}
+
+/*#endregion*/
+
+.accounts-header hr {
+    margin-bottom: 15px;
+    border: none;
+    border-top: 2px solid var(--palette-border);
+}
+
+.accounts-content {
+    display: flex;
+    height: 100%;
+}
+
+.accounts-action-hints {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--palette-dropdown-title);
+    height: 40%;
+}
