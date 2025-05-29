@@ -155,13 +155,59 @@ hr {
 
 .accounts-details-info-row {
     display: flex;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .accounts-details-info-name {
     width: 30%;
     font-weight: bold;
 }
+
+/*#region accounts-dropdown*/
+
+.accounts-dropdown-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.accounts-dropdown label {
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    left: 1.5em;
+    font-weight: bold;
+}
+
+.accounts-dropdown label::before {
+    --arrow-size: 0.45em;
+    position: absolute;
+    left: -1.5em;
+    top: calc(1em - 2*(var(--arrow-size)) + 1px);
+    content: "";
+    border-right: var(--arrow-size) solid transparent;
+    border-left: var(--arrow-size) solid black;
+    border-bottom: var(--arrow-size) solid transparent;
+    border-top: var(--arrow-size) solid transparent;
+}
+
+.accounts-dropdown-checkbox:checked+label::before {
+    top: 0.4em;
+    border-right: var(--arrow-size) solid transparent;
+    border-left: var(--arrow-size) solid transparent;
+    border-bottom: var(--arrow-size) solid transparent;
+    border-top: var(--arrow-size) solid black;
+}
+
+.accounts-dropdown ul {
+    list-style: none;
+}
+
+:not(.accounts-dropdown-checkbox:checked)+label+ul {
+    display: none;
+}
+
+/*#endregion*/
 
 .hidden {
     display: none;
