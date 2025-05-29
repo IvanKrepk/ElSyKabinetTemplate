@@ -39,7 +39,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* font-size: 1.2em; */
     font-weight: bold;
     margin-bottom: 10%;
 }
@@ -156,6 +155,10 @@
 
 .reports_spoiler_element_dropdown {
     width: 50%;
+}
+
+.hidden {
+    display: none;
 }
 
 /* CSS Mobile */

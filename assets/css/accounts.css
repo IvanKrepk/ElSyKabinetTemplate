@@ -10,8 +10,11 @@
     border: 1px solid var(--palette-border);
     border-radius: var(--border-radius);
     box-shadow: 0px 0px 5px 1px var(--palette-hover);
-    max-width: 300px; 
-    max-height: 300px; 
+    max-width: 400px;
+    min-width: 300px; 
+    max-height: 70%;
+    margin-right: 10px; 
+    white-space: nowrap
 }
 
 .accounts-list-title {
@@ -77,6 +80,7 @@
 }
 
 .accounts-list ul li {
+    cursor: pointer;
     padding: 5px 5px;
 }
 
@@ -87,7 +91,7 @@
 
 /*#endregion*/
 
-.accounts-header hr {
+hr {
     margin-bottom: 15px;
     border: none;
     border-top: 2px solid var(--palette-border);
@@ -98,9 +102,67 @@
     height: 100%;
 }
 
-.accounts-action-hints {
+.accounts-details {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.accounts-details-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--palette-dropdown-title);
-    height: 40%;
+    height: 60%;
+    border: 1px solid var(--palette-border);
+    border-radius: 5px;
+    font-size: 1.8em;
+}
+
+.accounts-details-title span {
+    font-weight: 500;
+}
+
+.accounts-details-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accounts-details-info-header-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.accounts-details-info-header-not-avail {
+    user-select: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--palette-text);
+    background-color: #db2828;
+}
+
+.accounts-details-info-header-avail {
+    user-select: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--palette-text);
+    background-color: #21ba45;
+}
+
+.accounts-details-info-row {
+    display: flex;
+    margin: 10px;
+}
+
+.accounts-details-info-name {
+    width: 30%;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }

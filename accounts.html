@@ -9,9 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <div class="page-content">
+            <div class="header">
             <img src="/assets/img/elsy-logo.svg"/>
-            <h2>ЭлСи.Кабинет</h2>
+            <h1>ЭлСи.Кабинет</h1>
             <div class="header_right">
                 <div class="header_element"  title="(Менеджер) Имя_1">
                     <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -25,38 +26,38 @@
                     </svg>
                 </div>
             </div>
-        </div>
-        <div class="subheader">
-            <div class="subheader_elements">
-                <div class="subheader_element">
-                    <svg width="1.5em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M296 368h-48V416h48V368zM256 0v128h128L256 0zM296 288h-48v48h48V288zM216 288h-48v48h48V288zM216 368h-48V416h48V368zM136 368h-48V416h48V368zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM328 240v192c0 8.875-7.125 16-16 16h-240c-8.875 0-16-7.125-16-16v-192c0-8.875 7.125-16 16-16h240C320.9 224 328 231.1 328 240zM136 288h-48v48h48V288z"></path>
-                    </svg>
-                    <span><h3>Отчеты</h3></span>
-                </div>
-                <div class="subheader_element">
-                    <svg width="2em" viewBox="50 110 1000 800" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M704 192h160v736H160V192h160.064v64H704v-64zM311.616 537.28l-45.312 45.248L447.36 763.52l316.8-316.8-45.312-45.184L447.36 673.024 311.616 537.28zM384 192V96h256v96H384z"></path>            
-                    </svg>
-                    <span><h3>Счета</h3></span>
-                </div>
-                <div class="subheader_element">
-                    <svg width="1.5em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M256 0v128h128L256 0zM288 256H96v64h192V256zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM64 72C64 67.63 67.63 64 72 64h80C156.4 64 160 67.63 160 72v16C160 92.38 156.4 96 152 96h-80C67.63 96 64 92.38 64 88V72zM64 136C64 131.6 67.63 128 72 128h80C156.4 128 160 131.6 160 136v16C160 156.4 156.4 160 152 160h-80C67.63 160 64 156.4 64 152V136zM320 440c0 4.375-3.625 8-8 8h-80C227.6 448 224 444.4 224 440v-16c0-4.375 3.625-8 8-8h80c4.375 0 8 3.625 8 8V440zM320 240v96c0 8.875-7.125 16-16 16h-224C71.13 352 64 344.9 64 336v-96C64 231.1 71.13 224 80 224h224C312.9 224 320 231.1 320 240z"></path>            
-                    </svg>
-                    <span><h3>Реквизиты</h3></span>
-                </div>
             </div>
-        </div>
-        <div class="content">
-            <div class="accounts-header">
-                <h1>Счета</h1>
-                <hr>
+            <div class="subheader">
+                <nav class="subheader_elements">
+                    <a class="subheader_element" href="/reports.html">
+                        <svg width="1.5em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M296 368h-48V416h48V368zM256 0v128h128L256 0zM296 288h-48v48h48V288zM216 288h-48v48h48V288zM216 368h-48V416h48V368zM136 368h-48V416h48V368zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM328 240v192c0 8.875-7.125 16-16 16h-240c-8.875 0-16-7.125-16-16v-192c0-8.875 7.125-16 16-16h240C320.9 224 328 231.1 328 240zM136 288h-48v48h48V288z"></path>
+                        </svg>
+                        <span><h3>Отчеты</h3></span>
+                    </a>
+                    <a class="subheader_element subheader-element-current" href="/accounts.html">
+                        <svg width="2em" viewBox="50 110 1000 800" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M704 192h160v736H160V192h160.064v64H704v-64zM311.616 537.28l-45.312 45.248L447.36 763.52l316.8-316.8-45.312-45.184L447.36 673.024 311.616 537.28zM384 192V96h256v96H384z"></path>            
+                        </svg>
+                        <span><h3>Счета</h3></span>
+                    </a>
+                    <a class="subheader_element" href="/profile.html">
+                        <svg width="1.5em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M256 0v128h128L256 0zM288 256H96v64h192V256zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM64 72C64 67.63 67.63 64 72 64h80C156.4 64 160 67.63 160 72v16C160 92.38 156.4 96 152 96h-80C67.63 96 64 92.38 64 88V72zM64 136C64 131.6 67.63 128 72 128h80C156.4 128 160 131.6 160 136v16C160 156.4 156.4 160 152 160h-80C67.63 160 64 156.4 64 152V136zM320 440c0 4.375-3.625 8-8 8h-80C227.6 448 224 444.4 224 440v-16c0-4.375 3.625-8 8-8h80c4.375 0 8 3.625 8 8V440zM320 240v96c0 8.875-7.125 16-16 16h-224C71.13 352 64 344.9 64 336v-96C64 231.1 71.13 224 80 224h224C312.9 224 320 231.1 320 240z"></path>            
+                        </svg>
+                        <span><h3>Реквизиты</h3></span>
+                    </a>
+                </nav>
             </div>
-            <div class="accounts-content">
-                <div class="accounts-list">
+            <div class="office-content">
+                <div>
+                    <h2>Счета</h2>
+                    <hr>
+                </div>
+                <div class="accounts-content">
+                    <div class="accounts-list">
                     <div class="accounts-list-title">
-                        <span>Ваши счета</span>
+                        <h3>Ваши счета</h3>
                         <div class="accounts-number">36</div>
                     </div>
                     <div class="accounts-list-filter">
@@ -90,15 +91,51 @@
                         <li>883(карта 0108-883)</li>
                         <li>884(карта 0108-884)</li>
                     </ul>
-                </div>
-                <div>
-                    <div class="accounts-action-hints">
-                        <span>Пожалуйста, выберите счёт из меню «Ваши счета».</span>
+                    </div>
+                    <div class="accounts-details">
+                        <div class="accounts-details-title hidden">
+                            <svg height="3em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+	                            <path d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,10.3H17a2.3,2.3,0,0,1,0-4.6h3ZM20,8H17a4,4,0,0,0,0,8h3v1a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V7A1,1,0,0,1,5,6H19a1,1,0,0,1,1,1Zm-4,4a1,1,0,1,0,1-1A1,1,0,0,0,16,12Z"/>
+                            </svg>
+                            <span>Пожалуйста, выберите счёт из меню <strong>«Ваши счета»</strong>.</span>
+                        </div>
+                        <div class="accounts-details-info">
+                            <div class="accounts-details-info-header">
+                                <div class="accounts-details-info-header-title">
+                                    <svg class="hidden" height="3em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+	                                    <path d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,10.3H17a2.3,2.3,0,0,1,0-4.6h3ZM20,8H17a4,4,0,0,0,0,8h3v1a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V7A1,1,0,0,1,5,6H19a1,1,0,0,1,1,1Zm-4,4a1,1,0,1,0,1-1A1,1,0,0,0,16,12Z"/>
+                                    </svg>
+                                    <svg width="3em" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 32 9 C 24.832 9 19 14.832 19 22 L 19 27.347656 C 16.670659 28.171862 15 30.388126 15 33 L 15 49 C 15 52.314 17.686 55 21 55 L 43 55 C 46.314 55 49 52.314 49 49 L 49 33 C 49 30.388126 47.329341 28.171862 45 27.347656 L 45 22 C 45 14.832 39.168 9 32 9 z M 32 13 C 36.963 13 41 17.038 41 22 L 41 27 L 23 27 L 23 22 C 23 17.038 27.037 13 32 13 z"/>
+                                    </svg>
+                                    <h2>Счёт №243</h2>
+                                </div>
+                                <div class="accounts-details-info-header-not-avail">Заблокирован</div>
+                            </div>
+                            <h3>Информация о счёте</h3>
+                            <hr>
+                            <div class="accounts-details-info-row">
+                                <span class="accounts-details-info-name">Название</span>
+                                <span>243</span>
+                            </div>
+                            <div class="accounts-details-info-row">
+                                <span class="accounts-details-info-name">Автомобиль</span>
+                                <span>-</span>
+                            </div>
+                            <div class="accounts-details-info-row">
+                                <span class="accounts-details-info-name">Номер автомобиля</span>
+                                <span>-</span>
+                            </div>
+                            <div class="accounts-details-info-row">
+                                <span class="accounts-details-info-name">ФИО</span>
+                                <span>-</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <footer><p><b t>1.0b8.9 08102024</b></p></footer>
+            <footer><p><b t>1.0b8.9 08102024</b></p></footer>
+        </div>    
     </div>    
     <script type="text/javascript" src="/assets/js/accounts.js"></script>
 </body>

@@ -24,16 +24,21 @@
 
 .container {
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
 }
 
-.content {
+.page-content {
     display: flex;
+    flex-direction: column;
+    margin: 0 auto 0px auto;
+    width: 100%;    
+}
+
+.office-content {
     flex-direction: column;
     width: 60%;
     height: 100%;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 0px auto;
     min-width: 65em;
 }
 
@@ -64,10 +69,6 @@ footer {
     margin-right: 10px;
     fill: var(--palette-text);
     width: 2em;
-}
-
-.header h2 {
-    font-size: 2em;
 }
 
 .header_right {
@@ -136,6 +137,7 @@ footer {
     border-radius: 20px;
     user-select: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .subheader_element span {
@@ -147,14 +149,34 @@ footer {
 }
 
 .subheader_element:hover {
+    background-color: var(--palette-hover);
+}
+
+.subheader_element:active {
     background-color: var(--palette-text-invert);
 }
 
-.subheader_element:hover span {
+.subheader_element:active span {
     color: var(--palette-text);
 }
 
-.subheader_element:hover svg {
+.subheader_element:active svg {
+    fill: var(--palette-text);
+}
+
+.subheader-element-current {
+    background-color: var(--palette-text-invert);    
+}
+
+.subheader-element-current:hover {
+    background-color: var(--palette-text-invert);    
+}
+
+.subheader-element-current span {
+    color: var(--palette-text);
+}
+
+.subheader-element-current svg {
     fill: var(--palette-text);
 }
 
@@ -283,10 +305,6 @@ footer {
     fill: var(--color-icon-hovered);
 }
 
-.hidden {
-    display: none;
-}
-
 /*#endregion*/
 
 /*#region DatePicker*/
@@ -338,10 +356,6 @@ and (max-width : 568px)
         display: flex;
         flex-direction: column;
         width: 100vw;
-    }
-
-    .header h2 {
-        font-size: 1.5em;
     }
 
     .subheader {
