@@ -130,8 +130,8 @@
                                 <span class="accounts-details-info-name">ФИО</span>
                                 <span>-</span>
                             </div>
-                            <div class="accounts-dropdown">
-                                <input class="accounts-dropdown-checkbox" type="checkbox" id="cbxContacts"/>
+                            <div class="accounts-contacts-spoiler">
+                                <input class="accounts-contacts-spoiler-checkbox" type="checkbox" id="cbxContacts"/>
                                 <label for="cbxContacts">Контакты</label>
                                 <ul>
                                     <li>
@@ -154,6 +154,28 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="accounts-details-row">
+                                <div class="accounts-button accounts-button-lock">Заблокировать</div>
+                                <div class="accounts-button">Изменить</div>
+                            </div>
+                            <div class="accounts-translate-row">
+                                <div class="accounts-translate-dropdown nowrap" name="AFS">
+                                    <div class="dropdown-field">
+                                        <input class="dropdown-field-value" type="text" placeholder="Перевести на ...">
+                                        <div class="close-button hidden">
+                                            <div class="close"></div>
+                                        </div>
+                                        <div class="dropdown-arrow"></div>
+                                    </div>
+                                    <ul class="dropdown-list hidden">
+                                        <li>830(карта 0108-830)</li>
+                                        <li>831(карта 0108-831)</li>
+                                        <li>832(карта 0108-832)</li>
+                                        <li>833(карта 0108-833)</li>
+                                        <li>834(карта 0108-834)</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,6 +183,7 @@
             <footer><p><b t>1.0b8.9 08102024</b></p></footer>
         </div>    
     </div>    
+    <script type="text/javascript" src="/assets/js/dropdown.js"></script>
     <script type="text/javascript" src="/assets/js/accounts.js"></script>
 </body>
 </html>
