@@ -109,6 +109,10 @@ hr {
     margin-left: 10px;
 }
 
+.accounts-details h3 {
+    margin-top: 20px;
+}
+
 .accounts-details-title {
     display: flex;
     flex-direction: column;
@@ -134,7 +138,6 @@ hr {
 .accounts-details-info-header-title {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .accounts-details-info-header-not-avail {
@@ -177,6 +180,10 @@ hr {
     background-color: var(--palette-dropdown-title);
 }
 
+.accounts-button:first-child {
+    margin-left: 0px;
+}
+
 .accounts-button-lock {
     background-color: #db2828;
     color: var(--palette-text);
@@ -185,17 +192,24 @@ hr {
 /*#region accounts-translate-dropdown*/
 
 .accounts-translate-dropdown {
-    display: inline-block;
-    border: 1px solid var(--palette-border);
-    border-radius: 5px;
-
-    width: 400px;
-
+    display: flex;
+    position: relative;
+    border-left: 1px solid var(--palette-border);
+    border-right: 1px solid var(--palette-border);
     --padding: 10px;
+
+    width: 35%;
 }
 
 .accounts-translate-dropdown .dropdown-field {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown-field-suffix {
     display: flex;
     align-items: center;
 }
@@ -234,7 +248,15 @@ hr {
 }
 
 .accounts-translate-dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: 100%;
     list-style: none;
+    border: 1px solid var(--palette-border);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 2;
 }
 
 .accounts-translate-dropdown ul li {
@@ -257,6 +279,28 @@ hr {
 .accounts-translate-row {
     display: flex;
     margin-top: 10px;
+    border: 1px solid var(--palette-border);
+    border-radius: 5px;
+}
+
+.accounts-translate-from {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+}
+
+.accounts-translate-button {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: var(--palette-dropdown-title);
+    width: 30%;
+    height: 100%;
 }
 
 /*#region accounts-contacts-spoiler*/

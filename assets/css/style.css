@@ -1,9 +1,7 @@
 :root {
     --palette-primary: #293594;
-    --palette-primary--rgb: 41, 53, 148;
     --palette-secondary: #90bc29;
-    --palette-secondary--rgb: 144, 188, 41;
-    --palette-header: #0000000d;
+    --palette-header: #e9e9e9;
     --palette-text: #f2f2f2;
     --palette-text-enable: black;
     --palette-text-not-enable: gray;
